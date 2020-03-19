@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-firestore.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <h1>Chat Room</h1>
+
+        <div class="content">
+
+            <form id="add-chat-form">
+                <input type="text" name="name" placeholder="Your Good Name" required>
+                <input type="text" name="message" placeholder="Message" required>
+                <button>Add Chat</button>
+            </form>
+
+            <ul id="chat-list"></ul>
+
+        </div>
+        
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- <script src="https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js"></script> -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCE8ND4B-6Lo9WKpAePTMPIrLRjANtWxYk",
+    authDomain: "fir-ninja-cafe.firebaseapp.com",
+    databaseURL: "https://fir-ninja-cafe.firebaseio.com",
+    projectId: "fir-ninja-cafe",
+    storageBucket: "fir-ninja-cafe.appspot.com",
+    messagingSenderId: "675080244190",
+    appId: "1:675080244190:web:3f0fa65db7ffde8c736b4f",
+    measurementId: "G-DWC9B1S4NT"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  db.settings({timestampsInSnapshots: true});
+//   firebase.analytics();
+</script>
+
+        <script src="app.js"></script>
+    </body>
+</html>
